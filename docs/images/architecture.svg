@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="270" viewBox="0 0 880 270" role="img" aria-label="Architecture illustration, not runtime evidence">
+<rect width="880" height="270" rx="16" fill="#f2f7f4"/>
+<g font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#153c2b">
+<text x="440" y="34" font-size="21" font-weight="bold">BudgetWise SA · local-first data flow</text>
+<g fill="white" stroke="#137547" stroke-width="2"><rect x="25" y="65" width="150" height="70" rx="10"/><rect x="220" y="65" width="175" height="70" rx="10"/><rect x="440" y="65" width="175" height="70" rx="10"/><rect x="660" y="65" width="190" height="70" rx="10"/></g>
+<text x="100" y="96">XML + Views</text><text x="100" y="119" font-size="13">View Binding + ViewModel</text>
+<text x="307" y="96">Room per account</text><text x="307" y="119" font-size="13">records + pending revisions</text>
+<text x="527" y="96">WorkManager</text><text x="527" y="119" font-size="13">connected network + retries</text>
+<text x="755" y="96">Firebase cloud</text><text x="755" y="119" font-size="13">Auth · Firestore REST · Storage</text>
+<text x="198" y="107">↔</text><text x="418" y="107">↔</text><text x="638" y="107">↔</text>
+<text x="440" y="184">Document change → trusted function → account-scoped FCM data message</text>
+<text x="440" y="222" font-size="14">Design illustration. Capture device, deployment, signing and CI evidence separately.</text></g></svg>

@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid; }
+    function positive(value) { return value is number && value > 0 && value <= 1000000000; }
+    function text(value, max) { return value is string && value.size() > 0 && value.size() <= max; }
+    function base(id) {
+      let d = request.resource.data;
+      return d.id == id && text(d.revision, 100) && d.deleted is bool;
+    }
+    match /users/{uid}/transactions/{id} {
+      allow read: if owner(uid);
+      allow create, update: if owner(uid) && base(id)
+        && request.resource.data.keys().hasOnly(['id','revision','deleted','type','category','amount','date','description','receiptPath'])
+        && request.resource.data.type in ['INCOME','EXPENSE']
+        && text(request.resource.data.category, 80) && positive(request.resource.data.amount)
+        && request.resource.data.date is int && request.resource.data.date > 0
+        && request.resource.data.description is string && request.resource.data.description.size() <= 1000
+        && (!('receiptPath' in request.resource.data) || (request.resource.data.receiptPath is string && request.resource.data.receiptPath.matches('https://firebasestorage.googleapis.com/.*')));
+      // Deletes are represented by synced tombstones.
+    }
+    match /users/{uid}/budgets/{id} {
+      allow read: if owner(uid);
+      allow create, update: if owner(uid) && base(id)
+        && request.resource.data.keys().hasOnly(['id','revision','deleted','category','amount','period','spent'])
+        && text(request.resource.data.category, 80) && positive(request.resource.data.amount)
+        && request.resource.data.period in ['Weekly','Monthly','Yearly']
+        && request.resource.data.spent == 0;
+    }
+    match /users/{uid}/goals/{id} {
+      allow read: if owner(uid);
+      allow create, update: if owner(uid) && base(id)
+        && request.resource.data.keys().hasOnly(['id','revision','deleted','name','targetAmount','currentAmount','targetDate','description'])
+        && text(request.resource.data.name, 80) && positive(request.resource.data.targetAmount)
+        && request.resource.data.currentAmount is number && request.resource.data.currentAmount >= 0 && request.resource.data.currentAmount <= 1000000000
+        && request.resource.data.targetDate is int && request.resource.data.targetDate > 0
+        && request.resource.data.description is string && request.resource.data.description.size() <= 1000;
+    }
+    match /users/{uid}/devices/{id} {
+      allow read, delete: if owner(uid);
+      allow create, update: if owner(uid) && request.resource.data.keys().hasOnly(['token','platform'])
+        && text(request.resource.data.token, 4096) && request.resource.data.platform == 'android';
+    }
+  }
+}

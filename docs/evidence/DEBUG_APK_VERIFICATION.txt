@@ -1,0 +1,22 @@
+BudgetWise SA 1.1.1 (version code 3), XML/Android Views debug APK — 5 November 2026
+Debug certificate for local installation; this is not an owner-signed release APK.
+SHA-256: DB55042F7677F286FEEE41B02770BF8E555EE87A0FDE272D39AA1361E4DF4A4E
+Bytes: 12696444
+
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: 5e202af0c91520b137c1a9989d26799bb4e64d3e1658f1d6af546e3a40b78592
+Signer #1 certificate SHA-1 digest: 29804f2ae68e5070dc4b98fc8557efd7b2b68301
+Signer #1 certificate MD5 digest: 20bb7f4c98244d983986212deb1e0351
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 58ccad67b9158193c15c89f80a6d234e50aacfa412e5c11488cfff1101e29283
+Signer #1 public key SHA-1 digest: 580931a0beca168244798f08ce134a4948791d0b
+Signer #1 public key MD5 digest: c4c494395caf3b8ca235cef790e96c06

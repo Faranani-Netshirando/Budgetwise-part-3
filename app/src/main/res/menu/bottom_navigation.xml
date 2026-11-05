@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/nav_dashboard" android:title="@string/dashboard" android:icon="@drawable/ic_nav_home"/>
+<item android:id="@+id/nav_transactions" android:title="@string/transactions" android:icon="@drawable/ic_nav_transactions"/>
+<item android:id="@+id/nav_budgets" android:title="@string/budgets" android:icon="@drawable/ic_nav_wallet"/>
+<item android:id="@+id/nav_goals" android:title="@string/goals" android:icon="@drawable/ic_nav_goal"/>
+<item android:id="@+id/nav_reports" android:title="@string/reports" android:icon="@drawable/ic_nav_chart"/>
+</menu>

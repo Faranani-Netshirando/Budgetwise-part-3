@@ -1,0 +1,17 @@
+BudgetWise SA 1.1.1 — Compose removal verification, 5 November 2026
+
+Final Gradle tasks passed:
+testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
+:app:dependencies --configuration debugRuntimeClasspath
+
+Resolved debug runtime Compose dependencies: 0
+Compiled APK DEX files inspected: 13
+Defined classes inspected: 19,864
+Compose classes found: 0
+
+All Compose UI source, compiler-plugin entries and dependency aliases were removed.
+The app uses 11 XML layouts, View Binding, Android Views, RecyclerView and a native Canvas chart.
+
+12 JVM tests passed. The two Robolectric UI tests inflate all 11 layouts and draw
+the chart in light and dark themes. Device interaction tests still require a phone/emulator.
+The owner subsequently requested upload to Faranani-Netshirando/Budgetwise-part-3.
