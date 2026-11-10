@@ -96,3 +96,9 @@ Existing prototype links: [YouTube](https://youtu.be/bIFmsnv2Nw8), [TikTok](http
 - [AGP 8.10 compatibility](https://developer.android.com/build/releases/agp-8-10-0-release-notes)
 - [App signing](https://developer.android.com/studio/publish/app-signing)
 - [Play target API requirements](https://support.google.com/googleplay/android-developer/answer/11926878)
+
+
+## Project Demonstration Video
+
+YouTube link: 
+https://youtu.be/0l6O-5xBpiQ?si=O7ztxDKE2vj-EKxv
