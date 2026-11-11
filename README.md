@@ -100,5 +100,5 @@ Existing prototype links: [YouTube](https://youtu.be/bIFmsnv2Nw8), [TikTok](http
 
 ## Project Demonstration Video
 
-YouTube link: 
-https://youtu.be/0l6O-5xBpiQ?si=O7ztxDKE2vj-EKxv
+TikTok link: 
+https://vt.tiktok.com/ZSpamDttt/
